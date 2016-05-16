@@ -1,0 +1,23 @@
+* {
+  font-family: 'Indie Flower', Arial, sans-serif
+}
+
+header {
+  width: 100%;
+  background-color: orange;
+}
+
+h3 {
+  margin: 0 0 0 30px;
+  color: #8363A1;
+  display: inline-block;
+}
+
+ul {
+  display: inline-block;
+}
+
+li {
+  display: inline-block;
+  padding-left: 25px;
+}
