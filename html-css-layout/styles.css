@@ -1,0 +1,54 @@
+* {
+  border: 2px solid black;
+  margin: 20px 0;
+}
+
+header {
+  height: 80px;
+  background-color: orange
+  width: 100%;
+}
+
+aside {
+  background-color: yellow;
+  display: inline-block;
+  width: 20%;
+}
+
+section {
+  float: left;
+}
+
+.main-content div {
+  margin: 0;
+  display: inline-block;
+}
+
+footer {
+  background-color: pink;
+}
+
+div {
+  width: 79%;
+  display: inline-block;
+}
+
+#one {
+  background-color: aliceblue;
+}
+
+#two {
+  background-color: tomato;
+}
+
+#three {
+  background-color: salmon;
+}
+
+#four {
+  background-color: cornsilk;
+}
+
+#five {
+  background: lawngreen;
+}
