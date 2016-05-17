@@ -1,16 +1,16 @@
 * {
-  border: 2px solid black;
+  border: 2px solid #000;
   margin: 20px 0;
 }
 
 header {
   height: 80px;
-  background-color: orange
+  background-color: orange;
   width: 100%;
 }
 
 aside {
-  background-color: yellow;
+  background-color: #ff0;
   display: inline-block;
   width: 20%;
 }
@@ -25,7 +25,7 @@ section {
 }
 
 footer {
-  background-color: pink;
+  background-color: #ffc0cb;
 }
 
 div {
@@ -34,21 +34,21 @@ div {
 }
 
 #one {
-  background-color: aliceblue;
+  background-color: #f0f8ff;
 }
 
 #two {
-  background-color: tomato;
+  background-color: #ff6347;
 }
 
 #three {
-  background-color: salmon;
+  background-color: #fa8072;
 }
 
 #four {
-  background-color: cornsilk;
+  background-color: #fff8dc;
 }
 
 #five {
-  background: lawngreen;
+  background: #7cfc00;
 }
