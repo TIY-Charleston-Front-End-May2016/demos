@@ -1,0 +1,136 @@
+/* This is the Header Section */
+* {
+  vertical-align: top;
+}
+
+header {
+  width: 100%;
+  height: 400px;
+  margin: 0 auto;
+  background-image: url('Woody.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+header h1 {
+  font-size: 6em;
+  margin: 0;
+  padding-left: 31%;
+  padding-top: 120px;
+  color: #fff;
+}
+
+header h1 span {
+  font-weight: 100;
+}
+/* END HEADER */
+
+/* BEGIN MAIN CONTENT */
+
+aside, section {
+  display: inline-block;
+}
+
+#bio-image:hover {
+  opacity: 0.3;
+}
+
+aside {
+  width: 25%;
+  margin: 0 auto;
+}
+
+aside div {
+  margin-top: 10px;
+  margin-left: 20%;
+}
+
+aside div img {
+  border-radius: 42%;
+}
+
+aside p {
+  padding: 0 40px;
+}
+
+section {
+  width: 74%;
+}
+
+
+
+section div {
+  width: 49%;
+  display: inline-block;
+}
+
+section div img {
+  width: 100%;
+  max-height: 300px;
+}
+
+section div h4 {
+  text-align: center;
+}
+
+section p {
+  padding: 0 40px;
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+  display: block;
+  background-color: rgba(51,127,60,1);
+  height: 75px;
+}
+
+footer h6 {
+  color: #fff;
+  margin-left: 10%;
+  position: relative;
+  display: inline-block;
+}
+
+footer ul {
+  display: inline-block;
+  margin: 0;
+  margin-left: 55%;
+}
+
+footer li {
+  display: inline-block;
+  height: 75px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fff;
+  padding-right: 10px;
+  height: 75px;
+  display: inline-block;
+  padding-top: 25px;
+}
+
+footer a:hover {
+  color: rgb(51,127,60);
+}
+
+footer li:hover {
+  background-color: #fff;
+  color: rgb(51,127,60);
+}
+
+
+.lightgreen-background {
+  background-color: lightgreen;
+}
+
+.scissors .lightgreen-background {
+  background-color: red;
+}
+
+div.lightgreen-background.scissors {
+  background-color: blue;
+}
