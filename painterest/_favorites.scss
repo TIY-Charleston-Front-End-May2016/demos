@@ -1,0 +1,27 @@
+.main-container {
+  vertical-align: top;
+  background-color: #85FF93;
+  aside {
+    display: inline-block;
+    width: 20%;
+    vertical-align: inherit;
+  }
+  section.photos {
+    display: inline-block;
+    width: 59%;
+  }
+  aside ul li img {
+    width: 32px;
+    border-radius: 50%;
+  }
+  aside li {
+    border-bottom: 1px solid gray;
+    list-style-type: none;
+  }
+
+  aside li a {
+   color: #fff;
+   font-size: 2em;
+   padding-left: 16px;
+ }
+}

@@ -1,0 +1,30 @@
+.four-photos {
+  width: 100%;
+  display: block;
+  ul {
+    padding: 0;
+  }
+  li {
+    display: inline-block;
+    width: 24%;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+.three-photos {
+  width: 75%;
+  display: block;
+  margin: 0 auto;
+  ul {
+    padding: 0;
+  }
+  li {
+    display: inline-block;
+    width: 32%;
+  }
+  img {
+    width: 100%;
+  }
+}
