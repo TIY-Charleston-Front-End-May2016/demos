@@ -80,6 +80,26 @@ header {
 .my-profile p {
   padding: 0 47px; }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main-container {
+    width: 100%; }
+    .main-container .favorite-people {
+      display: none; }
+    .main-container .my-profile {
+      display: none; }
+    .main-container section.photos {
+      width: 100%; }
+      .main-container section.photos div:nth-child(even) {
+        width: 100%;
+        background-color: orange; }
+      .main-container section.photos div:nth-child(odd) {
+        width: 100%;
+        background-color: pink; }
+      .main-container section.photos div:last-child {
+        background-color: magenta; }
+  footer {
+    display: none; } }
+
 @media (min-width: 320px) and (max-width: 767px) {
   .mobile-hidden {
     display: none; }

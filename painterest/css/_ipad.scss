@@ -1,3 +1,31 @@
 @media (min-width: 768px) and (max-width: 1024px) {
+  .main-container {
+    width: 100%;
 
+    .favorite-people {
+      display: none;
+    }
+
+    .my-profile {
+      display: none;
+    }
+
+    section.photos {
+      width: 100%;
+      div:nth-child(even) {
+        width: 100%;
+        background-color: orange;
+      }
+      div:nth-child(odd) {
+        width: 100%;
+        background-color: pink;
+      }
+      div:last-child {
+        background-color: magenta;
+      }
+    }
+  }
+  footer {
+    display: none;
+  }
 }
