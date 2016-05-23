@@ -1,0 +1,61 @@
+@media (min-width: 320px) and (max-width: 767px) {
+  .mobile-hidden {
+    display: none;
+  }
+
+  nav h4 {
+    padding-top: 3%;
+  }
+
+  .main-container {
+    .my-profile {
+      position: absolute;
+      top: 75px;
+      left: 2px;
+      padding-top: 20px;
+      width: 98%;
+      margin: 0 auto;
+      h4 {
+        display: none;
+      }
+      img {
+        width: 92%;
+        max-height: 265px;
+      }
+      p {
+        display: none;
+      }
+    }
+    .favorite-people, footer {
+      display: none;
+    }
+    section.photos {
+      background-color: rgba(0,0,0,0.4);
+      width: 100%;
+      margin: 0 auto;
+      position: absolute;
+      top: 356px;
+      .four-photos li.mobile-hidden, .three-photos li.mobile-hidden {
+        display: none;
+      }
+      .four-photos li {
+        width: 49%;
+      }
+      .three-photos li {
+        width: 95%;
+      }
+
+      .four-photos img {
+        width: 56%;
+        padding-left: 20%;
+        max-height: 100px;
+      }
+
+      .three-photos img {
+        max-height: 125px;
+        width: 77%;
+        padding-left: 11%;
+      }
+    }
+  }
+}
