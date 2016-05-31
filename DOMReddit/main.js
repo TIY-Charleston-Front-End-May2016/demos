@@ -18,8 +18,14 @@ var stuff = data.data.children.map(function(element) {
 })
 
 
+// Change CSS of First Item
+document.querySelector('li').style.fontSize = "4em"
+document.querySelector('li').style.fontFamily = "helvetica";
 
+// Change CSS of 6th Item
+var li = document.querySelectorAll('li')[5];
+li.style.backgroundColor = "orange"
 
-
-
-// document.getElementById('body').appendChild(navBar);
+//Get all elements that are list items and turn them to an array so you can loop over them.
+var list = document.querySelectorAll('li');
+list = Array.from(list);
