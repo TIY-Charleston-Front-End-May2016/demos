@@ -7,7 +7,8 @@ var stuff = data.data.children.map(function(element) {
     ups: element.data.ups,
     url: element.data.url
   }
-}).forEach(function(element) {
+})
+.forEach(function(element) {
   var li = document.createElement('li');
   var a = document.createElement('a');
   a.textContent = element.title;

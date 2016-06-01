@@ -1,0 +1,35 @@
+header, footer {
+  width: 100%;
+  background-color: aquamarine; }
+  header ul, footer ul {
+    padding-top: 2%;
+    float: right;
+    display: inline-block; }
+    header ul li, footer ul li {
+      color: #fff;
+      display: inline-block;
+      padding-right: 10px; }
+  header h4, footer h4 {
+    color: #fff;
+    font-size: 1.4em;
+    padding: 2% 2%;
+    display: inline-block;
+    margin: 0; }
+
+div.container {
+  vertical-align: top; }
+
+.blogs {
+  width: 65%;
+  display: inline-block; }
+
+aside.create-blog {
+  width: 34%;
+  display: inline-block;
+  vertical-align: inherit; }
+
+footer {
+  height: 75px; }
+
+.hidden {
+  display: none; }
