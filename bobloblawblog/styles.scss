@@ -21,6 +21,9 @@ header, footer {
 }
 div.container {
   vertical-align: top;
+  .home {
+    vertical-align: top;
+  }
 }
 .blogs {
   width: 65%;
@@ -30,7 +33,6 @@ div.container {
 aside.create-blog {
   width: 34%;
   display: inline-block;
-  vertical-align: inherit;
 }
 
 footer {

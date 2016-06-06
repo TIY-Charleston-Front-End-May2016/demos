@@ -1,0 +1,18 @@
+{
+  "name": "bobloblawblog",
+  "version": "0.0.2",
+  "description": "boblobs law blog jquery stuff great",
+  "main": "main.js",
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.4",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "sass": "node-sass -w styles.scss styles.css",
+    "start": "serve & npm run sass"
+  },
+  "author": "",
+  "license": "ISC"
+}
