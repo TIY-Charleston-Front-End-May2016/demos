@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Earthquake Mapper</title>
+    <style>
+      #map {
+        width: 500px;
+        height: 400px;
+        background-color: #CCC;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <script src="node_modules/jquery/dist/jquery.js" charset="utf-8"></script>
+    <script>
+      function initMap() {
+        var mapDiv = document.getElementById('map');
+        var map = new google.maps.Map(mapDiv,{
+          center: {lat: 44.540, lng: -78.546},
+          zoom: 4
+        });
+
+        $.ajax({
+          method: 'GET',
+          url: 'http://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2014-01-01&endtime=2014-01-02',
+          success: function(data) {
+            console.log("DATA",data)
+            data.features.map(function(element) {
+              return {
+                center: {
+                  lat: element.geometry.coordinates[1],
+                  lng: element.geometry.coordinates[0],
+                },
+                strokeColor: '#FF0000',
+                 strokeOpacity: 0.8,
+                 strokeWeight: 2,
+                 fillColor: '#FF0000',
+                 fillOpacity: 0.35,
+                  map: map,
+                radius: Math.pow(element.properties.mag,2) * 100000,
+                magnitude: `MAG: ${element.properties.mag}`
+              }
+            }).forEach(function(data) {
+              var circle = new google.maps.Circle(
+                data
+              );
+              google.maps.event.addListener(circle,'mouseover',function(){
+                this.setOptions({
+                  fillColor: "#0000FF"
+                })
+              })
+            })
+          },
+          error: function(data) {
+
+          }
+        })
+
+      }
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTeQrAuauuPn8QcDIvZiQMgT2mYYCW8DY&callback=initMap" async defer></script>
+    <script src="main.js" charset="utf-8"></script>
+
+  </body>
+</html>
