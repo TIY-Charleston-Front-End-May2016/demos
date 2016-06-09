@@ -47,11 +47,6 @@
               var circle = new google.maps.Circle(
                 data
               );
-              google.maps.event.addListener(circle,'mouseover',function(){
-                this.setOptions({
-                  fillColor: "#0000FF"
-                })
-              })
             })
           },
           error: function(data) {
