@@ -31,6 +31,86 @@ function Person(name,age,gender) {
 // var nathan = new Person('nathan',28,'male')
 // var henry = new Person('henry',2)
 
+class Superhero {
+  constructor(props) {
+    this.name = props.name || 'batman';
+    this.health = props.health || 300;
+    this.allegiance = props.allegiance || 'gotham';
+    this.weapon = props.weapon || null;
+  }
+
+  fightCrime() {
+    console.log(`I am ${this.name} and I am a crime fighter.`)
+  }
+
+  beSuper() {
+    console.log("I am super");
+  }
+}
+
+class MarvelHero extends Superhero {
+  constructor(props) {
+    super(props)
+    this.mutation = props.mutation;
+
+    this.bellyflop = props.bellyflop;
+  }
+
+  shootWeb() {
+    console.log(`I am ${this.name} and I just webbed you down, baddy.`);
+  }
+
+}
+
+
+
+class Weapon {
+  constructor(name = "Pulverizer", damage = 50) {
+    this.name = name;
+    this.damage = damage;
+  }
+
+  attack(enemy) {
+    if(enemy.health <= 0) {
+      console.error(`${enemy.name} has already been killed`)
+      return
+    }
+    console.log(`YOU ATTACK ${enemy.name} who originally had ${enemy.health} health.`)
+    enemy.health -= this.damage;
+    console.log(`${enemy.name} now has ${enemy.health} health`);
+    if(enemy.health <= 0) {
+        console.error(`You have defeated ${enemy.name}`);
+    }
+
+  }
+}
+
+
+let jokeCard = new Weapon('Bomb',25);
+var jokOBj = {
+  name:"joker",
+  health:200,
+  allegiance: 'bad guys',
+  weapon: jokeCard
+}
+var pulv = new Weapon();
+let joker = new Superhero(jokOBj);
+let batman = new Superhero({});
+let spiderman = new MarvelHero({name: "Spiderman", mutation: true,bellyflop: 'yes'})
+batman.weapon = pulv;
+// function Superhero(name,health,allegiance) {
+//   this.name = name;
+//   this.health = health;
+//   this.allegiance = 'Marvel';
+//
+//   // this.fightCrime = function() {
+//   //   console.log(" I AM " +this.name + " and I am a crime fighter");
+//   // }
+// }
+// Superhero.prototype.fightCrime = function() {
+//   console.log(" I AM " +this.name + " and I am a crime fighter");
+// }
+
 
 function Hero(opts) {
   this.allegiance = 'good'
@@ -67,15 +147,15 @@ function Villain(opts) {
   this.weapon = opts && opts.weapon ? opts.weapon : 'Laughing Gas'
 }
 
-function Weapon(opts) {
-  this.name = opts ? opts.name : 'Wolfsbane';
-  this.damage = opts ? opts.damage : Math.floor(Math.random() * 20);
-}
+// function Weapon(opts) {
+//   this.name = opts ? opts.name : 'Wolfsbane';
+//   this.damage = opts ? opts.damage : Math.floor(Math.random() * 20);
+// }
 
-var laserEyes = new Weapon({name: "LaserEyes", damage: 45});
-var wolfsbane = new Weapon();
-var bomb = new Weapon({name: "Joker Bomb", damage: 10});
-
-var joker = new Villain({weapon: bomb});
-var batman = new Hero({weapon: wolfsbane});
-var superman = new Hero({name: "Superman", health: 98, weapon: laserEyes});
+// var laserEyes = new Weapon({name: "LaserEyes", damage: 45});
+// var wolfsbane = new Weapon();
+// var bomb = new Weapon({name: "Joker Bomb", damage: 10});
+//
+// var joker = new Villain({weapon: bomb});
+// var batman = new Hero({weapon: wolfsbane});
+// var superman = new Hero({name: "Superman", health: 98, weapon: laserEyes});
