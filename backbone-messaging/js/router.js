@@ -19,7 +19,7 @@ module.exports = Backbone.Router.extend({
         this.newUser.on('created', function (model) {
             console.log(`New kid on the block: ${model.get('name')}`);
 
-            this.navigate('show/0', { trigger: true });   
+            this.navigate(`show/0`, { trigger: true });   
         }, this);
 
         this.showUser = new ShowUserView({
@@ -30,6 +30,7 @@ module.exports = Backbone.Router.extend({
 
     routes: {
         'new': 'newUser',
+        'show': 'showUser',
         'show/:who': 'showUser',
     },
 
@@ -40,10 +41,29 @@ module.exports = Backbone.Router.extend({
         this.showUser.el.classList.add('hidden');
     },
 
+    // http://localhost:8000/api/users/3
     showUser: function (who) {
+        // General pattern: 'if you're not supposed to be
+        // here, get out'.
+        if (who === null) {
+            this.navigate('new', { trigger: true });
+            return;
+        }
+
+        let self = this;
+
+        let internetPerson = new UserModel();
+        internetPerson.fetch({
+            url: `http://localhost:8000/api/users/${who}`,
+            success: function () {
+                // todo: fix `this`
+                self.showUser.model = internetPerson;
+                self.showUser.render();
+            },
+        });
+
         console.log('show user route for ' + who);
         this.showUser.el.classList.remove('hidden');
-
         this.newUser.el.classList.add('hidden');
     },
 });
