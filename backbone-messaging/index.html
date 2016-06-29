@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<nav>
+		<a href="#new">Update user</a>
+		<a href="#show/0">View user</a>
+	</nav>
+	<section id="user">
+		<h2 id="user-display">Creating new user</h2>
+		<input id="user-name" type="text" placeholder="Name">
+		<input id="user-hometown" type="text" placeholder="From">
+		<button>Update</button>
+	</section>
+
+	<section id="info">
+		<h2>User info</h2>
+		<p>Name: <span id="info-name"></span></p>
+		<p>Hometown: <span id="info-hometown"></span></p>
+	</section>
+
+	<script src="http://underscorejs.org/underscore-min.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script src="http://backbonejs.org/backbone-min.js"></script>
+	<script src="js/app.js"></script>
+</body>
+
+</html>
