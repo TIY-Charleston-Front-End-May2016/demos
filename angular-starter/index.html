@@ -1,0 +1,32 @@
+<!doctype html>
+
+<html ng-app="FriendApp">
+
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="js/app.js"></script>
+</head>
+
+<body>
+    <h2>The Friend Shoppe</h2>
+    <section ng-controller="FriendController">
+        <input type="text" ng-model="login.username">
+        <input type="text" ng-model="login.password">
+        <button ng-click="login()">Log in</button>
+
+        <button ng-click="flip()">New person</button>
+        <h2>Hello, my name is {{ person.name }} and I'm a {{ person.job }}.</h2>
+
+        <ul ng-repeat="potato in people | orderBy:'name'">
+            <li>{{ potato.name }}</li>
+        </ul>
+        <h3>People in array: {{ people.length }}</h3>
+    </section>
+
+    <!--<section ng-controller="PetController">
+
+    </section>-->
+</body>
+
+</html>
