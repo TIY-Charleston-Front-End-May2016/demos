@@ -1,0 +1,7 @@
+<h2>People I May Know</h2>
+<ul>
+    <li ng-repeat="friend in friends">
+        <p>{{ friend.name.full | capitalize | child }}</p>
+        <button ng-click="add(friend)">Add friend</button>
+    </li>
+</ul>
