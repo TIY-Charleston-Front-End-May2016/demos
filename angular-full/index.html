@@ -1,0 +1,26 @@
+<!doctype html>
+
+<!-- Don't forget to initialize your ng-app! -->
+<html ng-app="LibraryApp">
+
+<head>
+    <title>Book Monster</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-route.js"></script>
+    <script src="js/app.js"></script>
+</head>
+
+<body>
+    <h1>Book Monster</h1>
+    <nav>
+        <ul>
+            <li><a href="#/available">Available</a></li>
+            <li><a href="#/borrowed">Borrowed</a></li>
+        </ul>
+    </nav>
+    <!-- Main content area, to be populated with templates -->
+    <main ng-view></main>
+</body>
+
+</html>

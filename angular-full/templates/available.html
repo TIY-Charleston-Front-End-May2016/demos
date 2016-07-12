@@ -1,0 +1,7 @@
+<h1>{{ name }}</h1>
+
+<ul>
+    <li ng-show="!book.borrowed" ng-repeat="tome in books">
+        <book info="tome"></book>
+    </li>
+</ul>
