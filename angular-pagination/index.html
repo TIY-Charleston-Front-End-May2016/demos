@@ -1,0 +1,29 @@
+<!doctype html>
+
+<!-- Don't forget to initialize your ng-app! -->
+<html ng-app="SaladSoldierApp">
+
+<head>
+    <title>Salad Soldier</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-route.js"></script>
+    <script src="js/app.js"></script>
+</head>
+
+<body>
+    <h1>Salad Soldier</h1>
+    <h2>Things to try</h2>
+    <!-- Main content area, to be populated with templates -->
+    <main ng-controller="MainController">
+        <button ng-click="prev()">Prev</button>
+        <span>{{ pageNumber }}</span>
+        <button ng-click="next()">Next</button>
+        <ul>
+            <li ng-repeat="ingredient in ingredients">
+                <p>{{ingredient.name}}</p>
+            </li>
+        </ul>
+    </main>
+</body>
+
+</html>
