@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Book1",
+        "author": "PersonA",
+        "borrowed": true,
+        "id": 0
+    },
+    {
+        "title": "Book2",
+        "author": "PersonB",
+        "borrowed": false,
+        "id": 1
+    },
+    {
+        "title": "Book3",
+        "author": "PersonC",
+        "borrowed": false,
+        "id": 2
+    },
+    {
+        "title": "Book4",
+        "author": "PersonD",
+        "borrowed": false,
+        "id": 3
+    },
+    {
+        "title": "Book5",
+        "author": "PersonD",
+        "borrowed": true,
+        "id": 4
+    }
+]
